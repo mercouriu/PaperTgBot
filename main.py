@@ -26,7 +26,7 @@ def resend(message):
     markup.add(item2)
     bot.send_message(message.chat.id, 'Отправлено!', reply_markup=markup)
 
-    bot.send_message(message.chat.id, 'Хочешь оставить свой комментарий о работе или дополнить подпись к фото? Отправь его прямо сейчас:', reply_markup=markup)
+    bot.send_message(message.chat.id, 'Присоединяйся к чатику, чтобы быть в курсе всех новостей и получать много годных развёрток от других ребят.', reply_markup=markup)
 
 @bot.message_handler(commands=['menu'])
 def button_message(message):
@@ -48,14 +48,14 @@ def message_reply(message):
         markup.add(item3)
         bot.send_message(message.chat.id, 'Что тебя интересует?', reply_markup=markup)
     elif message.text == "Конкурс паперкрафта ✂️":
-        bot.send_message(message.chat.id, 'Каждый может поучаствовать в конкурсе и показать свои модельки. Время от времени мы будем выкладывать их в группу. Чьи работы наберут больше всех лайков, смогут выбрать развёртки моделек любимых героев в следующих постах! Поэтому присоединяйтесь к чатику, чтобы быть в курсе всех новостей и получить много годных развёрток от других ребят!'
+        bot.send_message(message.chat.id, 'Каждый может поучаствовать в конкурсе и показать свои модельки. Время от времени мы будем выкладывать их в группу. Чьи работы наберут больше всех лайков, смогут выбрать развёртки моделек любимых героев в следующих постах!'
 
                                           '\n\n Учти, что ты можешь отправлять лишь самостоятельно собранные работы! Спасибо :3')
 
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         item1 = types.KeyboardButton("Назад")
         markup.add(item1)
-        bot.send_message(message.chat.id, 'Отправь фото своей работы (и подпись к ней по желанию):', reply_markup=markup)
+        bot.send_message(message.chat.id, 'Отправь фото своей работы (и подпись к ней по желанию) :', reply_markup=markup)
 
     elif message.text == "Назад":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
